@@ -8,11 +8,14 @@
 
 /* Begin PBXBuildFile section */
 		B8EE70BA1FA9BDF90085EC5A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70B91FA9BDF90085EC5A /* AppDelegate.swift */; };
-		B8EE70BC1FA9BDF90085EC5A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70BB1FA9BDF90085EC5A /* ViewController.swift */; };
 		B8EE70BF1FA9BDF90085EC5A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EE70BD1FA9BDF90085EC5A /* Main.storyboard */; };
 		B8EE70C11FA9BDF90085EC5A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8EE70C01FA9BDF90085EC5A /* Assets.xcassets */; };
 		B8EE70C41FA9BDF90085EC5A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B8EE70C21FA9BDF90085EC5A /* LaunchScreen.storyboard */; };
 		B8EE70CF1FA9BDF90085EC5A /* MVVMSampleTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70CE1FA9BDF90085EC5A /* MVVMSampleTests.swift */; };
+		B8EE70DD1FA9BE2A0085EC5A /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70DC1FA9BE2A0085EC5A /* MainViewController.swift */; };
+		B8EE70EB1FA9C19E0085EC5A /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70EA1FA9C19E0085EC5A /* DataService.swift */; };
+		B8EE70ED1FA9C1B10085EC5A /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70EC1FA9C1B10085EC5A /* User.swift */; };
+		B8EE70EF1FA9C7B70085EC5A /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8EE70EE1FA9C7B70085EC5A /* UserViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +31,6 @@
 /* Begin PBXFileReference section */
 		B8EE70B61FA9BDF90085EC5A /* MVVMSample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MVVMSample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EE70B91FA9BDF90085EC5A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		B8EE70BB1FA9BDF90085EC5A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		B8EE70BE1FA9BDF90085EC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B8EE70C01FA9BDF90085EC5A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8EE70C31FA9BDF90085EC5A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +38,10 @@
 		B8EE70CA1FA9BDF90085EC5A /* MVVMSampleTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MVVMSampleTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8EE70CE1FA9BDF90085EC5A /* MVVMSampleTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MVVMSampleTests.swift; sourceTree = "<group>"; };
 		B8EE70D01FA9BDF90085EC5A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B8EE70DC1FA9BE2A0085EC5A /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		B8EE70EA1FA9C19E0085EC5A /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		B8EE70EC1FA9C1B10085EC5A /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		B8EE70EE1FA9C7B70085EC5A /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,8 +83,10 @@
 		B8EE70B81FA9BDF90085EC5A /* MVVMSample */ = {
 			isa = PBXGroup;
 			children = (
+				B8EE70DB1FA9BE150085EC5A /* Views */,
+				B8EE70DA1FA9BE100085EC5A /* ViewModels */,
+				B8EE70D91FA9BE090085EC5A /* Models */,
 				B8EE70B91FA9BDF90085EC5A /* AppDelegate.swift */,
-				B8EE70BB1FA9BDF90085EC5A /* ViewController.swift */,
 				B8EE70BD1FA9BDF90085EC5A /* Main.storyboard */,
 				B8EE70C01FA9BDF90085EC5A /* Assets.xcassets */,
 				B8EE70C21FA9BDF90085EC5A /* LaunchScreen.storyboard */,
@@ -94,6 +102,31 @@
 				B8EE70D01FA9BDF90085EC5A /* Info.plist */,
 			);
 			path = MVVMSampleTests;
+			sourceTree = "<group>";
+		};
+		B8EE70D91FA9BE090085EC5A /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE70EA1FA9C19E0085EC5A /* DataService.swift */,
+				B8EE70EC1FA9C1B10085EC5A /* User.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		B8EE70DA1FA9BE100085EC5A /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE70EE1FA9C7B70085EC5A /* UserViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		B8EE70DB1FA9BE150085EC5A /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8EE70DC1FA9BE2A0085EC5A /* MainViewController.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +232,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B8EE70BC1FA9BDF90085EC5A /* ViewController.swift in Sources */,
 				B8EE70BA1FA9BDF90085EC5A /* AppDelegate.swift in Sources */,
+				B8EE70ED1FA9C1B10085EC5A /* User.swift in Sources */,
+				B8EE70DD1FA9BE2A0085EC5A /* MainViewController.swift in Sources */,
+				B8EE70EF1FA9C7B70085EC5A /* UserViewModel.swift in Sources */,
+				B8EE70EB1FA9C19E0085EC5A /* DataService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -354,6 +390,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38D8VUK3CJ;
 				INFOPLIST_FILE = MVVMSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nick1ee.MVVMSample;
@@ -368,6 +405,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 38D8VUK3CJ;
 				INFOPLIST_FILE = MVVMSample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = nick1ee.MVVMSample;
